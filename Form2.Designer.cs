@@ -31,10 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.label14 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
@@ -48,11 +46,15 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.label14 = new System.Windows.Forms.Label();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.tabPage4.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -60,6 +62,7 @@
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.HotTrack = true;
             this.tabControl1.Location = new System.Drawing.Point(2, 2);
             this.tabControl1.Multiline = true;
@@ -70,10 +73,8 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.label14);
             this.tabPage1.Controls.Add(this.label5);
             this.tabPage1.Controls.Add(this.label4);
-            this.tabPage1.Controls.Add(this.label3);
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
@@ -84,19 +85,10 @@
             this.tabPage1.Text = "About";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(19, 63);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(218, 13);
-            this.label14.TabIndex = 5;
-            this.label14.Text = "Platform: Windows with .NET Framework 3.5";
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(34, 119);
+            this.label5.Location = new System.Drawing.Point(38, 149);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(206, 26);
             this.label5.TabIndex = 4;
@@ -106,29 +98,21 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(54, 102);
+            this.label4.Location = new System.Drawing.Point(58, 125);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(167, 13);
             this.label4.TabIndex = 3;
             this.label4.Text = "Works only on Lineage® II games";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(49, 168);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(176, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "proto.type@hotmail.com (email only)";
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(19, 47);
+            this.label2.Location = new System.Drawing.Point(15, 41);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(223, 13);
+            this.label2.Size = new System.Drawing.Size(245, 65);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Author: Prototype [BRProto] - December 2011";
+            this.label2.Text = "Author: Prototype [BRProto] \r\nCreated at December 2011\r\nUpdate1 at Sep. 30th 2014" +
+    "\r\n\r\nRequirements: Windows with .NET Framework 3.5";
             // 
             // label1
             // 
@@ -138,7 +122,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(162, 26);
             this.label1.TabIndex = 0;
-            this.label1.Text = "AutoFire 1.0.3";
+            this.label1.Text = "AutoFire 1.1.0";
             // 
             // tabPage2
             // 
@@ -254,6 +238,39 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // tabPage4
+            // 
+            this.tabPage4.Controls.Add(this.label14);
+            this.tabPage4.Controls.Add(this.linkLabel1);
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(274, 187);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "Contact";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(45, 62);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(173, 26);
+            this.label14.TabIndex = 1;
+            this.label14.Text = "Fork on GitHub";
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(12, 104);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(251, 13);
+            this.linkLabel1.TabIndex = 0;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "https://github.com/println/AutoFire_Lineage-csharp";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -274,6 +291,8 @@
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.tabPage4.ResumeLayout(false);
+            this.tabPage4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -286,7 +305,6 @@
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
@@ -298,6 +316,8 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }

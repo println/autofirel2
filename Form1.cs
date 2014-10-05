@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace AutoFire
@@ -19,13 +20,15 @@ namespace AutoFire
         private WindowSeeker Seeker;
         private int SelectedWindowID = 0;
 
+        private const string TEXT_VALUE = "Enter a Key";
+
         private void InitializeBasicComponents()
         {
             Seeker = new WindowSeeker();
-            Seeker.Name = "lineage ii";
-            Seeker.WindowEvent += new WindowSeeker.WindowEventHandler(ltbx_windows_Update);
-            Seeker.ActivityWinEvent += new WindowSeeker.ActivityWinEventHandler(ActivityWindow_running);
-            Seeker.WindowClosedEvent += new WindowSeeker.WindowClosedEventHandler(Window_Closed);
+            Seeker.Name = "Lineage II";
+            Seeker.WindowEvent += new WindowSeeker.WindowEventHandler(ltbx_windows_Update);//alteracao na lista de janelas
+            Seeker.ActivityWinEvent += new WindowSeeker.ActivityWinEventHandler(ActivityWindow_running);//rodando
+            Seeker.WindowClosedEvent += new WindowSeeker.WindowClosedEventHandler(Window_Closed);//janela fechou
             Seeker.Start();
         }
 
@@ -185,7 +188,7 @@ namespace AutoFire
 
         private void SetTextBoxText(TextBoxEX textboxEx)
         {
-            textboxEx.Text = "Enter a Key";
+            textboxEx.Text = TEXT_VALUE;
         }
 
         private void SetButtonText(Button button)
@@ -211,32 +214,32 @@ namespace AutoFire
         private void GenericComboBox_SelectedIndexChanged(object sender, EventArgs e)//Event - combobox controller
         {
 
-            ComboBox selected_combobox = (ComboBox)sender;
+            //ComboBox selected_combobox = (ComboBox)sender;
 
-            if (selected_combobox.SelectedIndex > 0)
-            {
-                foreach (ComboBox combobox in ComboList)
-                {
+            //if (selected_combobox.SelectedIndex > 0)
+            //{
+            //    foreach (ComboBox combobox in ComboList)
+            //    {
 
-                    if (combobox.SelectedIndex == selected_combobox.SelectedIndex && combobox != selected_combobox)
-                    {
-                        if (!combobox.Enabled)
-                        {
-                            DialogResult question = MessageBox.Show("Would you like to change previously selected key?", "Change key", MessageBoxButtons.OKCancel);
-                            if (question == DialogResult.Cancel)
-                            {
-                                selected_combobox.ResetText();
-                                break;
-                            }
-                            else
-                            {
-                                Break((ComboBox)combobox);
-                            }
-                        }
-                        combobox.ResetText();
-                    }
-                }
-            }
+            //        if (combobox.SelectedIndex == selected_combobox.SelectedIndex && combobox != selected_combobox)
+            //        {
+            //            if (!combobox.Enabled)
+            //            {
+            //                DialogResult question = MessageBox.Show("Would you like to change previously selected key?", "Change key", MessageBoxButtons.OKCancel);
+            //                if (question == DialogResult.Cancel)
+            //                {
+            //                    selected_combobox.ResetText();
+            //                    break;
+            //                }
+            //                else
+            //                {
+            //                    Break((ComboBox)combobox);
+            //                }
+            //            }
+            //            combobox.ResetText();
+            //        }
+            //    }
+            //}
         }
 
         private void GenericTextBox_Focus(object sender, EventArgs e)//Event - textbox controller
@@ -279,7 +282,7 @@ namespace AutoFire
 
             if (validator.Ready() && !ButtonList.Contains(button) && SelectedWindowID > 0)
             {
-                Macro macro = new Macro(validator.GetProfile(),chk_mode.Checked);
+                Macro macro = new Macro(validator.GetProfile(), chk_mode.Checked);
 
                 ButtonList.Add(button);
                 MacroList.Add(macro);
@@ -376,6 +379,73 @@ namespace AutoFire
         {
             Form2 frm = new Form2();
             frm.ShowDialog(this);
+        }
+        #endregion
+
+        #region Skill Label
+        private void Label_edit_Click(object sender, EventArgs e)
+        {
+
+            var label = sender as Label;
+
+            TextBoxEXLabel text = new TextBoxEXLabel();
+
+            text.Label = label;
+
+            text.Leave += new System.EventHandler(this.TextBox_edit_Save);
+            text.KeyDown += new KeyEventHandler(this.TextBox_KeyDown);
+
+            text.Text = label.Text;
+
+            text.Parent = label.Parent;
+
+            text.Location = new System.Drawing.Point(0, 3);
+            text.Name = "textedit";
+            text.Size = new System.Drawing.Size(83, 20);
+            text.TabIndex = 3;
+
+            text.BringToFront();
+
+            text.Focus();
+        }
+
+        private void TextBox_edit_Save(object sender, EventArgs e)
+        {
+            TextBoxEXLabel text = sender as TextBoxEXLabel;
+
+            Label label = text.Label;
+
+            label.Text = text.Text;
+
+            text.Dispose();
+
+        }
+
+        private void TextBox_edit_Cancel(object sender, EventArgs e)
+        {
+            TextBoxEXLabel text = sender as TextBoxEXLabel;
+            text.Dispose();
+        }
+
+        private void TextBox_KeyDown(object sender, KeyEventArgs e)
+        {
+
+            TextBoxEXLabel text = sender as TextBoxEXLabel;
+            switch (e.KeyData)
+            {
+                case Keys.Escape:
+                    DialogResult = DialogResult.Cancel;
+                    text.Leave -= new System.EventHandler(this.TextBox_edit_Save);
+                    text.KeyDown -= new KeyEventHandler(this.TextBox_KeyDown);
+                    TextBox_edit_Cancel(sender, null);
+                    break;
+                case Keys.Return:
+                    DialogResult = DialogResult.OK;
+                    text.KeyDown -= new KeyEventHandler(this.TextBox_KeyDown);
+                    TextBox_edit_Save(sender, null);
+                    break;
+            }
+
         }
         #endregion
     }

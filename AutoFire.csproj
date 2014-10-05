@@ -50,6 +50,9 @@
     <Compile Include="Components\Macro.cs" />
     <Compile Include="Components\Observer.cs" />
     <Compile Include="Components\Storage.cs" />
+    <Compile Include="Components\TextBoxExLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

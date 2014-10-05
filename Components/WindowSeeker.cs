@@ -9,13 +9,13 @@ namespace AutoFire
     class WindowSeeker
     {
         public delegate void WindowEventHandler(string[] names, int[] ids);
-        public event WindowEventHandler WindowEvent;
+        public event WindowEventHandler WindowEvent;//lista de janelas
 
         public delegate void ActivityWinEventHandler(bool Act);
-        public event ActivityWinEventHandler ActivityWinEvent;
+        public event ActivityWinEventHandler ActivityWinEvent;//execucao da busca
 
         public delegate void WindowClosedEventHandler(bool critical, string info);
-        public event WindowClosedEventHandler WindowClosedEvent;
+        public event WindowClosedEventHandler WindowClosedEvent;//janela fechada
 
         private Process[] ProcessesList;
         private Thread Finder;

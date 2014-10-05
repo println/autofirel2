@@ -34,7 +34,6 @@ namespace AutoFire
 
         //Variables used in the call to SetWindowsHookEx
         public delegate IntPtr KeyboardDelegate(int Code, IntPtr wParam, ref KEYBOARD lParam);
-        private KeyboardDelegate callback;
         private IntPtr hookID;
 
         //Variables used in class
@@ -83,9 +82,9 @@ namespace AutoFire
 
         private bool hook()
         {
-            callback = new KeyboardDelegate(HookCallback);
+            KeyboardDelegate c = new KeyboardDelegate(HookCallback);
             IntPtr hInstance = LoadLibrary("User32");
-            hookID = SetWindowsHookEx(WH_KEYBOARD_LL, callback, hInstance, 0);
+            hookID = SetWindowsHookEx(WH_KEYBOARD_LL, c, hInstance, 0);
 
             bool result = hookID != IntPtr.Zero ? true : false;
 
@@ -154,7 +153,7 @@ namespace AutoFire
         #region ImportDLLs
 
         [DllImport("user32.dll", CharSet = CharSet.Auto, SetLastError = true)]
-        static extern IntPtr SetWindowsHookEx(int idHook, KeyboardDelegate callback, IntPtr hInstance, uint theardID);
+        static extern IntPtr SetWindowsHookEx(int idHook, KeyboardDelegate callback, IntPtr hInstance, uint theardId);
         [DllImport("user32.dll", CharSet = CharSet.Auto, SetLastError = true)]
         static extern bool UnhookWindowsHookEx(IntPtr hInstance);
         [DllImport("user32.dll", CharSet = CharSet.Auto, SetLastError = true)]
