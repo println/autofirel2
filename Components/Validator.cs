@@ -11,8 +11,20 @@ namespace AutoFire
         private bool loop;
         private Keys activation;
 
-        public Validator(GroupBox groupbox)
+        private GroupBox groupbox;
+        private System.Drawing.Color defaultColor;
+        private System.Drawing.Color activeColor;
+
+
+        public Validator(GroupBox groupbox, System.Drawing.Color defaultColor, System.Drawing.Color activeColor)
         {
+            // TODO: Complete member initialization
+            this.groupbox = groupbox;
+            this.defaultColor = defaultColor;
+            this.activeColor = activeColor;
+
+            this.groupbox = groupbox;
+
             foreach (Control c in groupbox.Controls)
             {
                 if (c is Panel)
@@ -40,6 +52,11 @@ namespace AutoFire
             profile.values = values.ToArray();
             profile.loop = loop;
             profile.activation = activation;
+
+            profile.groupbox = groupbox;
+
+            profile.DEFAULT_COLOR = defaultColor;
+            profile.ACTIVE_COLOR = activeColor;
 
             return profile;
         }
@@ -82,12 +99,38 @@ namespace AutoFire
         }
     }
 
-    struct DataProfile
+    public class DataProfile
     {
         public object[] keys;
         public int[] values;
         public bool loop;
         public object activation;
-    }
+        public GroupBox groupbox;
+        public System.Drawing.Color DEFAULT_COLOR;
+        public System.Drawing.Color ACTIVE_COLOR;
 
+        public void Active()
+        {
+            if (groupbox.InvokeRequired)
+            {
+                groupbox.BeginInvoke((MethodInvoker)delegate() { groupbox.BackColor = ACTIVE_COLOR; });
+            }
+            else
+            {
+                groupbox.BackColor = ACTIVE_COLOR;
+            }
+        }
+
+        public void Deactive()
+        {
+            if (groupbox.InvokeRequired)
+            {
+                groupbox.BeginInvoke((MethodInvoker)delegate() { groupbox.BackColor = DEFAULT_COLOR; });
+            }
+            else
+            {
+                groupbox.BackColor = DEFAULT_COLOR;
+            }
+        }
+    }
 }

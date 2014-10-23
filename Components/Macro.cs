@@ -54,6 +54,8 @@ namespace AutoFire
             for (int i = 0; i < profile.values.Length; i++)
                 CreateThread(i);
 
+            profile.Active();
+
             running = profile.loop;
         }
 
@@ -64,24 +66,33 @@ namespace AutoFire
 
             threads.Clear();
 
+            profile.Deactive();
+
             running = false;
         }
 
         private void CreateThread(int index)
         {
             Thread thread = new Thread(() => Sender(profile.keys[index], profile.values[index]));
-            thread.Start();
             threads.Add(thread);
+            thread.Start();
         }
 
         private void Sender(object key, int time)
-        {
+        {            
             do
             {
                 Thread.Sleep(time);
                 keySender.SendKey(key);
 
             } while (profile.loop);
+
+            threads.Remove(Thread.CurrentThread);
+
+            if (threads.Count == 0)
+            {
+                Abort();
+            }
         }
 
         ~Macro()

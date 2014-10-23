@@ -13,12 +13,27 @@ namespace AutoFire
             InitializeComponent();
             InitializeFormControls();
             InitializeBasicComponents();
+
+            FormBackColor(ACTIVE_COLOR, DEFAULT_COLOR);
+        }
+
+        private void FormBackColor(Color a, Color b)
+        {
+            double red = a.R * 0.080 + b.R * 0.92;
+            double green = a.G * 0.080 + b.G * 0.92;
+            double blue = a.B * 0.080 + b.B * 0.92;
+
+            this.BackColor = Color.FromArgb((int)red, (int)green, (int)blue);
+
         }
 
         #region Seeker
 
         private WindowSeeker Seeker;
         private int SelectedWindowID = 0;
+
+        private System.Drawing.Color DEFAULT_COLOR = System.Drawing.SystemColors.Control;
+        private System.Drawing.Color ACTIVE_COLOR = System.Drawing.Color.OrangeRed;
 
         private const string TEXT_VALUE = "Enter a Key";
 
@@ -79,9 +94,9 @@ namespace AutoFire
         private void ActivityWindow_running(bool active)
         {
             if (active)
-                pnl_activity.BackColor = System.Drawing.Color.GreenYellow;
+                pnl_activity.BackColor = ACTIVE_COLOR;
             else
-                pnl_activity.BackColor = System.Drawing.Color.Empty;
+                pnl_activity.BackColor = DEFAULT_COLOR;
         }
 
         private void Window_Closed(bool critical, string info)
@@ -278,7 +293,7 @@ namespace AutoFire
 
             GroupBox groupbox = (GroupBox)button.Parent;
 
-            Validator validator = new Validator(groupbox);
+            Validator validator = new Validator(groupbox, this.BackColor, ACTIVE_COLOR);
 
             if (validator.Ready() && !ButtonList.Contains(button) && SelectedWindowID > 0)
             {

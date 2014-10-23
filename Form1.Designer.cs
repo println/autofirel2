@@ -43,7 +43,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
-            this.textBox1 = new AutoFire.TextBoxEX();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -63,7 +62,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.comboBox7 = new System.Windows.Forms.ComboBox();
             this.numericUpDown7 = new System.Windows.Forms.NumericUpDown();
-            this.textBox2 = new AutoFire.TextBoxEX();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.button2 = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -83,7 +81,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.comboBox11 = new System.Windows.Forms.ComboBox();
             this.numericUpDown11 = new System.Windows.Forms.NumericUpDown();
-            this.textBox3 = new AutoFire.TextBoxEX();
             this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.button3 = new System.Windows.Forms.Button();
             this.pnl_activity = new System.Windows.Forms.Panel();
@@ -91,6 +88,9 @@
             this.btn_load = new System.Windows.Forms.Button();
             this.btn_about = new System.Windows.Forms.Button();
             this.chk_mode = new System.Windows.Forms.CheckBox();
+            this.textBox1 = new AutoFire.TextBoxEX();
+            this.textBox2 = new AutoFire.TextBoxEX();
+            this.textBox3 = new AutoFire.TextBoxEX();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
@@ -121,9 +121,9 @@
             // ltbx_windows
             // 
             this.ltbx_windows.FormattingEnabled = true;
-            this.ltbx_windows.Location = new System.Drawing.Point(12, 12);
+            this.ltbx_windows.Location = new System.Drawing.Point(21, 12);
             this.ltbx_windows.Name = "ltbx_windows";
-            this.ltbx_windows.Size = new System.Drawing.Size(210, 30);
+            this.ltbx_windows.Size = new System.Drawing.Size(201, 30);
             this.ltbx_windows.TabIndex = 7;
             this.ltbx_windows.SelectedIndexChanged += new System.EventHandler(this.ltbx_windows_SelectedIndexChanged);
             // 
@@ -253,17 +253,6 @@
             this.numericUpDown3.Name = "numericUpDown3";
             this.numericUpDown3.Size = new System.Drawing.Size(56, 20);
             this.numericUpDown3.TabIndex = 1;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Args = null;
-            this.textBox1.BoxKeys = System.Windows.Forms.Keys.None;
-            this.textBox1.Location = new System.Drawing.Point(57, 118);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(96, 20);
-            this.textBox1.TabIndex = 2;
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // checkBox1
             // 
@@ -446,17 +435,6 @@
             this.numericUpDown7.Size = new System.Drawing.Size(56, 20);
             this.numericUpDown7.TabIndex = 1;
             // 
-            // textBox2
-            // 
-            this.textBox2.Args = null;
-            this.textBox2.BoxKeys = System.Windows.Forms.Keys.None;
-            this.textBox2.Location = new System.Drawing.Point(57, 151);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(96, 20);
-            this.textBox2.TabIndex = 4;
-            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
@@ -638,17 +616,6 @@
             this.numericUpDown11.Size = new System.Drawing.Size(56, 20);
             this.numericUpDown11.TabIndex = 1;
             // 
-            // textBox3
-            // 
-            this.textBox3.Args = null;
-            this.textBox3.BoxKeys = System.Windows.Forms.Keys.None;
-            this.textBox3.Location = new System.Drawing.Point(57, 151);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(96, 20);
-            this.textBox3.TabIndex = 4;
-            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // checkBox3
             // 
             this.checkBox3.AutoSize = true;
@@ -670,10 +637,11 @@
             // 
             // pnl_activity
             // 
+            this.pnl_activity.BackColor = System.Drawing.SystemColors.Control;
             this.pnl_activity.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnl_activity.Location = new System.Drawing.Point(637, 232);
+            this.pnl_activity.Location = new System.Drawing.Point(12, 12);
             this.pnl_activity.Name = "pnl_activity";
-            this.pnl_activity.Size = new System.Drawing.Size(15, 15);
+            this.pnl_activity.Size = new System.Drawing.Size(10, 30);
             this.pnl_activity.TabIndex = 0;
             // 
             // btn_save
@@ -719,12 +687,45 @@
             this.chk_mode.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLight;
             this.chk_mode.FlatAppearance.CheckedBackColor = System.Drawing.Color.Gray;
             this.chk_mode.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.chk_mode.Location = new System.Drawing.Point(549, 227);
+            this.chk_mode.Location = new System.Drawing.Point(577, 227);
             this.chk_mode.Name = "chk_mode";
             this.chk_mode.Size = new System.Drawing.Size(77, 23);
             this.chk_mode.TabIndex = 11;
             this.chk_mode.Text = "Global Mode";
             this.chk_mode.UseVisualStyleBackColor = true;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Args = null;
+            this.textBox1.BoxKeys = System.Windows.Forms.Keys.None;
+            this.textBox1.Location = new System.Drawing.Point(57, 118);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(96, 20);
+            this.textBox1.TabIndex = 2;
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Args = null;
+            this.textBox2.BoxKeys = System.Windows.Forms.Keys.None;
+            this.textBox2.Location = new System.Drawing.Point(57, 151);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
+            this.textBox2.Size = new System.Drawing.Size(96, 20);
+            this.textBox2.TabIndex = 4;
+            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Args = null;
+            this.textBox3.BoxKeys = System.Windows.Forms.Keys.None;
+            this.textBox3.Location = new System.Drawing.Point(57, 151);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.ReadOnly = true;
+            this.textBox3.Size = new System.Drawing.Size(96, 20);
+            this.textBox3.TabIndex = 4;
+            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Form1
             // 
@@ -746,7 +747,7 @@
             this.MinimizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "AutoFire 1.1.0";
+            this.Text = "AutoFire [OrangeRed]";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

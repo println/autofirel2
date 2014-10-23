@@ -88,7 +88,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(38, 149);
+            this.label5.Location = new System.Drawing.Point(38, 154);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(206, 26);
             this.label5.TabIndex = 4;
@@ -107,7 +107,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(15, 41);
+            this.label2.Location = new System.Drawing.Point(19, 40);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(245, 65);
             this.label2.TabIndex = 1;
@@ -117,12 +117,12 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(17, 10);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(18, 10);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(162, 26);
+            this.label1.Size = new System.Drawing.Size(231, 20);
             this.label1.TabIndex = 0;
-            this.label1.Text = "AutoFire 1.1.0";
+            this.label1.Text = "AutoFire 1.1.0 - OrangeRed";
             // 
             // tabPage2
             // 
@@ -253,17 +253,17 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(45, 62);
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(10, 18);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(173, 26);
+            this.label14.Size = new System.Drawing.Size(66, 20);
             this.label14.TabIndex = 1;
-            this.label14.Text = "Fork on GitHub";
+            this.label14.Text = "GitHub";
             // 
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(12, 104);
+            this.linkLabel1.Location = new System.Drawing.Point(12, 41);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(251, 13);
             this.linkLabel1.TabIndex = 0;

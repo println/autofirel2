@@ -41,6 +41,7 @@ namespace AutoFire
         private bool global;
         private List<Macro> macros = new List<Macro>();
         private List<Keys> keys = new List<Keys>();
+        private KeyboardDelegate callback;
 
         internal static Observer Instance
         {
@@ -82,9 +83,9 @@ namespace AutoFire
 
         private bool hook()
         {
-            KeyboardDelegate c = new KeyboardDelegate(HookCallback);
+            callback = new KeyboardDelegate(HookCallback);
             IntPtr hInstance = LoadLibrary("User32");
-            hookID = SetWindowsHookEx(WH_KEYBOARD_LL, c, hInstance, 0);
+            hookID = SetWindowsHookEx(WH_KEYBOARD_LL, callback, hInstance, 0);
 
             bool result = hookID != IntPtr.Zero ? true : false;
 
