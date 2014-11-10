@@ -1,8 +1,3 @@
-[Oo]bj
-\!/[Bb]in/
-[Bb]in/*
-# Track binary file:
-\!bin/Release/AutoFire.exe
 *.user
 *.suo
 *.[Cc]ache
@@ -14,4 +9,11 @@
 _ReSharper.*
 *.resharper
 Ankh.NoLoad
+
+[Oo]bj
+!/[Bb]in/
+/[Bb]in/*
+!/[Bb]in/[Rr]elease/
+/[Bb]in/[Rr]elease/*
+!/[Bb]in/[Rr]elease/AutoFire.exe
 
