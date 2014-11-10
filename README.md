@@ -1,9 +1,9 @@
-** AutoFire_Lineage-csharp
+## AutoFire
 
 
-Macro de teclado, similar ao CPReload, para Lineage II. 
+Macro para as teclas Fxx do teclado, similar ao CPReload, para Lineage II. 
 
 
-*** Download
+### Download here
 
-https://github.com/println/AutoFire_Lineage-csharp/blob/master/bin/Release/AutoFire.exe
+[https://github.com/println/AutoFire_Lineage-csharp/blob/master/bin/Release/AutoFire.exe](https://github.com/println/AutoFire_Lineage-csharp/blob/master/bin/Release/AutoFire.exe "Donwload Binary")
