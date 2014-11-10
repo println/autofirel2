@@ -1,7 +1,9 @@
 ## AutoFire
 
 
-Macro para as teclas Fxx do teclado, similar ao CPReload, para Lineage II. 
+[Pt-Br] Macro para as teclas Fxx do teclado, similar ao CPReload, para Lineage II. 
+
+Keyboard macro to function keys, like the CPReload. Working to Lineage II client game.
 
 
 ### Download here
