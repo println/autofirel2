@@ -11,9 +11,9 @@ _ReSharper.*
 Ankh.NoLoad
 
 [Oo]bj
-!/[Bb]in/
-/[Bb]in/*
-!/[Bb]in/[Rr]elease/
-/[Bb]in/[Rr]elease/*
-!/[Bb]in/[Rr]elease/AutoFire.exe
+!/bin/
+/bin/*
+!/bin/Release/
+/bin/Release/*
+!/bin/Release/AutoFire.exe
 
