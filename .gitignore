@@ -1,4 +1,5 @@
 [Oo]bj
+\!/[Bb]in/
 [Bb]in/*
 # Track binary file:
 \!bin/Release/AutoFire.exe
