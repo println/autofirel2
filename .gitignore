@@ -13,4 +13,4 @@ _ReSharper.*
 Ankh.NoLoad
 
 # Track binary file:
-!bin/Release/AutoFire.exe
+\!bin/Release/AutoFire.exe
