@@ -15,5 +15,5 @@ Ankh.NoLoad
 /bin/*
 !/bin/Release/
 /bin/Release/*
-!/bin/Release/AutoFire.exe
+!/bin/Release/AutoFire.zip
 
