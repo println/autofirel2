@@ -33,6 +33,6 @@ namespace AutoFire
             var si = new ProcessStartInfo(url);
             Process.Start(si);
             linkLabel1.LinkVisited = true;
-        }
+        }       
     }
 }
