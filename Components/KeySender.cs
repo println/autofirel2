@@ -23,10 +23,11 @@ namespace AutoFire
         public void SendKey(object key)
         {
             const Int32 WM_KEYDOWN = 0x100;
+            const Int32 WM_SYSKEYDOWN = 0x0104;
             //const Int32 WM_KEYUP = 0x101;
 
             IntPtr selectedProcess = WindowSeeker.GetProcess().MainWindowHandle;
-            PostMessage(selectedProcess, WM_KEYDOWN, (Keys)key, 0);
+            PostMessage(selectedProcess, WM_SYSKEYDOWN, (Keys)key, 1);
         }
         
         ~KeySender()

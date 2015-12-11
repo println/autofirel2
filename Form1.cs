@@ -13,7 +13,7 @@ namespace AutoFire
             InitializeComponent();
             InitializeFormControls();
             InitializeBasicComponents();
-
+            this.Text += FORM_TITLE;
             FormBackColor(ACTIVE_COLOR, DEFAULT_COLOR);
         }
 
@@ -33,7 +33,8 @@ namespace AutoFire
         private int SelectedWindowID = 0;
 
         private System.Drawing.Color DEFAULT_COLOR = System.Drawing.SystemColors.Control;
-        private System.Drawing.Color ACTIVE_COLOR = System.Drawing.Color.OrangeRed;
+        private System.Drawing.Color ACTIVE_COLOR = System.Drawing.Color.DarkBlue;
+        private String FORM_TITLE = " [DarkBlue]";
 
         private const string TEXT_VALUE = "Enter a Key";
 

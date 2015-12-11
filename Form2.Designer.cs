@@ -47,9 +47,9 @@
             this.label6 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.label3 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.label3 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -112,8 +112,8 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(245, 65);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Author: Prototype [BRProto] \r\nCreated at December 2011\r\nUpdate1 at Sep. 30th 2014" +
-    "\r\n\r\nRequirements: Windows with .NET Framework 3.5";
+            this.label2.Text = "Author: Proto [BRProto] \r\nCreated at December 2011\r\nUpdated at Dec. 11th 2015\r\n\r\n" +
+    "Requirements: Windows with .NET Framework 3.5";
             // 
             // label1
             // 
@@ -121,9 +121,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(18, 10);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(231, 20);
+            this.label1.Size = new System.Drawing.Size(123, 20);
             this.label1.TabIndex = 0;
-            this.label1.Text = "AutoFire 1.1.1 - OrangeRed";
+            this.label1.Text = "AutoFire 1.1.2";
             // 
             // tabPage2
             // 
@@ -252,6 +252,15 @@
             this.tabPage4.Text = "Contact";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(64, 153);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(150, 13);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Contact us by facebook page!";
+            // 
             // label14
             // 
             this.label14.AutoSize = true;
@@ -273,15 +282,6 @@
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "https://www.facebook.com/autofirel2";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(64, 153);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(150, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Contact us by facebook page!";
             // 
             // Form2
             // 

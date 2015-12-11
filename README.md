@@ -1,6 +1,6 @@
 ## Download here
 
-[Autofire - OrangeRed Version](https://github.com/println/AutoFire_Lineage-csharp/blob/master/bin/Release/AutoFire.zip?raw=true "Donwload Binary")
+[Autofire - DarkBlue Version](https://github.com/println/AutoFire_Lineage-csharp/blob/master/bin/Release/AutoFire.zip?raw=true "Donwload Binary")
 
 
 ## AutoFire
