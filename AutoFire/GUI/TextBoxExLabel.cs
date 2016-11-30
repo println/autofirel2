@@ -9,8 +9,6 @@ namespace AutoFire
         {
             get;
             set;
-        }
-
-        
+        }        
     }
 }

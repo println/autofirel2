@@ -11,9 +11,5 @@ _ReSharper.*
 Ankh.NoLoad
 
 [Oo]bj
-!/bin/
-/bin/*
-!/bin/Release/
-/bin/Release/*
-!/bin/Release/AutoFire.zip
+/bin
 
