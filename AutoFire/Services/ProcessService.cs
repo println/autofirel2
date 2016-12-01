@@ -17,10 +17,12 @@ namespace AutoFire.Services
         }
 
 
-        public virtual Process GetProcess(uint pid)
+        public virtual Process GetProcessByPid(int pid)
         {
             return Process.GetProcesses()
-                .First(p => p.Id == pid);
+                .FirstOrDefault(p => p.Id == pid);
         }
+
+        //http://stackoverflow.com/questions/967646/monitor-when-an-exe-is-launched
     }
 }

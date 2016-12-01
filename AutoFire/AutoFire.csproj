@@ -80,6 +80,7 @@
     <Compile Include="Components\Validator.cs" />
     <Compile Include="Components\WindowSeeker.cs" />
     <Compile Include="Services\ProcessService.cs" />
+    <Compile Include="Services\WindowHandler.cs" />
     <EmbeddedResource Include="GUI\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
