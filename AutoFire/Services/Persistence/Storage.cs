@@ -5,9 +5,9 @@ using System.Xml.Linq;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace AutoFire
+namespace AutoFire.Service.Persistence
 {
-    class Storage
+    public class Storage
     {
         Form form;
         public Storage(Form f)

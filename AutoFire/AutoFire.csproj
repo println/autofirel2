@@ -52,7 +52,7 @@
     <Compile Include="GUI\GUIManager.cs" />
     <Compile Include="Macro\Macro.cs" />
     <Compile Include="Macro\Observer.cs" />
-    <Compile Include="Persistence\Storage.cs" />
+    <Compile Include="Services\Persistence\Storage.cs" />
     <Compile Include="GUI\TextBoxExLabel.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -79,8 +79,12 @@
     </Compile>
     <Compile Include="Components\Validator.cs" />
     <Compile Include="Components\WindowSeeker.cs" />
-    <Compile Include="Services\ProcessService.cs" />
-    <Compile Include="Services\WindowHandler.cs" />
+    <Compile Include="Services\InputKey\KeyboardHook32.cs" />
+    <Compile Include="Services\OutputKey\DxKeyboard.cs" />
+    <Compile Include="Services\OutputKey\VKeyboard.cs" />
+    <Compile Include="Services\Process\ProcessMonitor.cs" />
+    <Compile Include="Services\Process\ProcessService.cs" />
+    <Compile Include="Services\Window\WindowHandler.cs" />
     <EmbeddedResource Include="GUI\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -112,6 +116,7 @@
     <None Include="Resources\br.gif" />
     <Content Include="Resources\pkrj-insignea.ico" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
