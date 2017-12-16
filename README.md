@@ -12,6 +12,7 @@
 - XML
 - User32.DLL keyboard hook(capture all input)
 - Windows Processes Monitor
+- User32.DLL SendMessage(not work with directInput)
 - .Net 3.5
 - Concurrency (Threads)
 
