@@ -4,7 +4,7 @@
 
 ![12376759_920494944685192_2739661586323627107_n](https://user-images.githubusercontent.com/1585951/34073318-22f55318-e27e-11e7-9660-e6e1e2db79d1.png)
 
-#### Facebook fanpage: [https://www.facebook.com/autofirel2/](https://www.facebook.com/autofirel2/)
+#### Facebook's fanpage: [https://www.facebook.com/autofirel2/](https://www.facebook.com/autofirel2/)
 
 ### Tecnology
 - C#
@@ -21,7 +21,7 @@
 
 Keyboard macro to function keys, like the CPReload. Working to Lineage II client game.
 
-###Windows 10 bug
+### Windows 10 bug
 
 [Pt-Br] Você pode usar o autofire com o windows 10 utilizando uma das três opções listadas a baixo:
 
