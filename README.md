@@ -1,7 +1,14 @@
 ## Download here
 
-[Autofire - DarkBlue Version](https://github.com/println/AutoFire_Lineage-csharp/releases)
+[Autofire - DarkBlue Version](https://github.com/println/autofirel2/releases)
 
+### Tecnology
+- C#
+- Windows Forms
+- XML
+- User32.DLL keyboard hook(capture all input)
+- Windows Processes Monitor
+- .Net 3.5
 
 ## AutoFire
 
