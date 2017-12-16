@@ -4,7 +4,7 @@
 
 ### Tecnology
 - C#
-- Windows Forms (desktop app)
+- Windows Forms (windows desktop app)
 - XML
 - User32.DLL keyboard hook(capture all input)
 - Windows Processes Monitor
