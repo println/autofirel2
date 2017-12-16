@@ -9,6 +9,7 @@
 - User32.DLL keyboard hook(capture all input)
 - Windows Processes Monitor
 - .Net 3.5
+- Concurrency (Threads)
 
 ## AutoFire
 
