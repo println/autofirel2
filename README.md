@@ -30,7 +30,7 @@ Keyboard macro to function keys, like the CPReload. Working to Lineage II client
   - Ou Colocar o l2.exe em modo de compatibilidade com o windows 7/8
   - Ou colocar o autofire em modo de compatibilidade com o windows 7/8
 
-You can use autofire with Windows 10 making one of three options below:
+You can use autofire with Windows 10 by one of three options below:
 
   - Disable the XBOX's game bar(WinKey + G in game)
   - Or Run the l2.exe in compatibility mode to windows 7/8
