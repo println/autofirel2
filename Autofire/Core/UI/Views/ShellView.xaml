@@ -1,0 +1,103 @@
+﻿<Window x:Class="Autofire.Core.UI.Views.ShellView"
+		xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+		mc:Ignorable="d"	
+		xmlns:resx="clr-namespace:Autofire.Properties"
+		xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+		xmlns:cal="http://www.caliburnproject.org"
+		TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+		TextElement.FontWeight="Regular"
+		TextElement.FontSize="13"
+		TextOptions.TextFormattingMode="Ideal"
+		TextOptions.TextRenderingMode="Auto"
+		Background="{DynamicResource MaterialDesignPaper}"
+		FontFamily="{DynamicResource MaterialDesignFont}"		
+        Title="Autofire 1.5"
+		Width="750"
+		SizeToContent="Height" 
+		ResizeMode="NoResize">
+
+	<materialDesign:DialogHost>
+
+		<materialDesign:DrawerHost Padding="0" HorizontalAlignment="Stretch" VerticalAlignment="Center" BorderBrush="{DynamicResource MaterialDesignDivider}">
+
+			<materialDesign:DrawerHost.TopDrawerContent>
+				<ContentControl cal:View.Model="{Binding DataManager}"></ContentControl>
+			</materialDesign:DrawerHost.TopDrawerContent>
+
+			<StackPanel  Margin="10" Orientation="Vertical" >
+				<Grid Margin=" 10" x:Name="Header">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="*" />
+						<ColumnDefinition Width="*" />
+						<ColumnDefinition Width="*" />
+					</Grid.ColumnDefinitions>
+
+					<StackPanel Orientation="Vertical" Grid.Column="0">
+						<StackPanel Orientation="Horizontal">
+							<TextBlock  Style="{StaticResource MaterialDesignDisplay1TextBlock}"  MaxWidth="184" Text="{Binding DataManager.ProfileVM.Name}"/>
+							<Button 
+								Margin="5 0 0 0"
+								Height="30"
+								Width="30"
+								Style="{StaticResource MaterialDesignFlatButton}"
+								Command="{x:Static materialDesign:DrawerHost.OpenDrawerCommand}"								
+								CommandParameter="{x:Static Dock.Top}"
+								ToolTip="{x:Static resx:Resources.ProfileManager}">
+								<materialDesign:PackIcon Kind="AccountSettings" Margin="-13" Width="24" Height="24"/>
+							</Button>
+						</StackPanel>
+						<TextBlock  Style="{StaticResource MaterialDesignHeadlineTextBlock}"  Text="{Binding  DataManager.ProfileVM.Description}"/>
+					</StackPanel>
+
+					<ContentControl x:Name="GameBar"  Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5"></ContentControl>
+
+					<StackPanel  
+						Grid.Column="2" 
+						HorizontalAlignment="Center"
+						Orientation="Horizontal"
+						Margin="10">
+
+						<Button 
+							Height="38"
+							Width="110"
+							HorizontalAlignment="Center"
+							VerticalContentAlignment="Center"
+							x:Name="Run"
+							Style="{StaticResource MaterialDesignRaisedAccentButton}"
+							IsEnabled="{Binding CanRun}"
+							materialDesign:ShadowAssist.ShadowDepth="Depth1">
+							<StackPanel Orientation="Horizontal">
+								<TextBlock  VerticalAlignment="Center" Text="{x:Static resx:Resources.Run}"/>
+								<materialDesign:Badged 
+									Margin="14 8 0 0"
+									BadgeColorZoneMode="PrimaryDark"
+									Badge="{Binding TotalActivated}"/>
+							</StackPanel>
+						</Button>
+
+						<ToggleButton 
+							Margin="10 0 0 0"
+							Style="{StaticResource MaterialDesignActionLightToggleButton}"
+							Background="{DynamicResource MaterialDesignChipBackground}"
+							ToolTip="{x:Static resx:Resources.HotkeyGlobalMode}"
+							IsChecked="{Binding DataManager.ProfileVM.IsGlobal}">
+							<ToggleButton.Content>
+								<materialDesign:PackIcon Kind="EarthOff" Foreground="{DynamicResource MaterialDesignBodyLight}"/>
+							</ToggleButton.Content>
+							<materialDesign:ToggleButtonAssist.OnContent>
+								<materialDesign:PackIcon Kind="Earth" Foreground="{DynamicResource SecondaryAccentBrush}" />
+							</materialDesign:ToggleButtonAssist.OnContent>
+						</ToggleButton>
+
+					</StackPanel>
+				</Grid>
+
+				<ContentControl cal:View.Model="{Binding DataManager.ProfileVM}"></ContentControl>
+
+			</StackPanel>
+		</materialDesign:DrawerHost>
+	</materialDesign:DialogHost>
+</Window>
