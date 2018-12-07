@@ -1,0 +1,282 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.Net.Compilers.2.10.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.2.10.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A39417E8-F042-4A7B-A40D-46FD6C4E20E3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Autofire</RootNamespace>
+    <AssemblyName>Autofire</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Caliburn.Micro, Version=3.2.0.0, Culture=neutral, PublicKeyToken=8e5891231f2ed21f">
+      <HintPath>..\packages\Caliburn.Micro.Core.3.2.0\lib\net45\Caliburn.Micro.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Caliburn.Micro.Platform, Version=3.2.0.0, Culture=neutral, PublicKeyToken=8e5891231f2ed21f">
+      <HintPath>..\packages\Caliburn.Micro.3.2.0\lib\net45\Caliburn.Micro.Platform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Caliburn.Micro.Platform.Core, Version=3.2.0.0, Culture=neutral, PublicKeyToken=8e5891231f2ed21f">
+      <HintPath>..\packages\Caliburn.Micro.3.2.0\lib\net45\Caliburn.Micro.Platform.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MaterialDesignColors, Version=1.0.0.14576, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\packages\MaterialDesignColors.1.1.1\lib\net45\MaterialDesignColors.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MaterialDesignThemes.Wpf, Version=2.5.0.1205, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\packages\MaterialDesignThemes.2.5.0.1205\lib\net45\MaterialDesignThemes.Wpf.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\netstandard1.0\System.ValueTuple.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Caliburn.Micro.3.2.0\lib\net45\System.Windows.Interactivity.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="ValueTupleBridge, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\packages\ValueTupleBridge.0.1.5\lib\net45\ValueTupleBridge.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Config\AppConfig.cs" />
+    <Compile Include="Core\Features\IProfileManager.cs" />
+    <Compile Include="Core\Features\Profile\Builder\IProfileBuilder.cs" />
+    <Compile Include="Core\Features\Profile\Builder\ProfileBuilder.cs" />
+    <Compile Include="Core\Features\Profile\Builder\ProfileFactory.cs" />
+    <Compile Include="Core\Features\Profile\Model\Action.cs" />
+    <Compile Include="Core\Features\Profile\Model\IAction.cs" />
+    <Compile Include="Core\Features\Profile\Model\IMacro.cs" />
+    <Compile Include="Core\Features\Profile\Model\IProfile.cs" />
+    <Compile Include="Core\Features\Profile\Model\Macro.cs" />
+    <Compile Include="Core\Features\Profile\Model\Profile.cs" />
+    <Compile Include="Core\UI\ViewModels\ActionViewModel.cs" />
+    <Compile Include="Core\UI\ViewModels\DataManagerDeleteModalViewModel.cs" />
+    <Compile Include="Core\UI\ViewModels\DataManagerModalViewModel.cs" />
+    <Compile Include="Core\UI\ViewModels\DataManagerViewModel.cs" />
+    <Compile Include="Core\UI\ViewModels\GameViewModel.cs" />
+    <Compile Include="Core\UI\ViewModels\Helpers\ModelToViewModel.cs" />
+    <Compile Include="Core\UI\ViewModels\MacroModalViewModel.cs" />
+    <Compile Include="Core\UI\ViewModels\MacroViewModel.cs" />
+    <Compile Include="Core\UI\ViewModels\Messages\SaveMessage.cs" />
+    <Compile Include="Core\UI\ViewModels\ProfileViewModel.cs" />
+    <Compile Include="Core\UI\ViewModels\ShellViewModel.cs" />
+    <Compile Include="Core\UI\ViewModels\ViewModel\IActionViewModel.cs" />
+    <Compile Include="Core\UI\ViewModels\ViewModel\IDataModel.cs" />
+    <Compile Include="Core\UI\ViewModels\ViewModel\IMacroViewModel.cs" />
+    <Compile Include="Core\UI\ViewModels\ViewModel\IProfileViewModel.cs" />
+    <Compile Include="Core\UI\ViewModels\ViewModel\IRunnable.cs" />
+    <Compile Include="Core\UI\Views\ActionView.xaml.cs">
+      <DependentUpon>ActionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Core\UI\Views\DataManagerDeleteModalView.xaml.cs">
+      <DependentUpon>DataManagerDeleteModalView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Core\UI\Views\DataManagerModalView.xaml.cs">
+      <DependentUpon>DataManagerModalView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Core\UI\Views\DataManagerView.xaml.cs">
+      <DependentUpon>DataManagerView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Core\UI\Views\GameView.xaml.cs">
+      <DependentUpon>GameView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Core\UI\Views\MacroModalView.xaml.cs">
+      <DependentUpon>MacroModalView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Core\UI\Views\MacroView.xaml.cs">
+      <DependentUpon>MacroView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Core\UI\Views\ModalBase.xaml.cs">
+      <DependentUpon>ModalBase.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Core\UI\Views\ProfileView.xaml.cs">
+      <DependentUpon>ProfileView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Core\UI\Views\ShellView.xaml.cs">
+      <DependentUpon>ShellView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Support\Utils\ViewModel\Reactive\AbstractMessage.cs" />
+    <Compile Include="Support\Utils\ViewModel\Reactive\AbstractReactiveViewModel.cs" />
+    <Compile Include="Support\Utils\ViewModel\Reactive\OnNotifyMessage.cs" />
+    <Compile Include="Support\Utils\ViewModel\Reactive\OnSaveMessage.cs" />
+    <Compile Include="Bootstrapper.cs" />
+    <Compile Include="Core\Core.cs" />
+    <Compile Include="Core\Features\Control\ControlPanel.cs" />
+    <Compile Include="Core\Features\Profile\ProfileManager.cs" />
+    <Compile Include="Core\Features\Game\GameManager.cs" />
+    <Compile Include="Core\Features\IControlPanelService.cs" />
+    <Compile Include="Core\Features\IGameManager.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <DependentUpon>Resources.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Properties\Resources.pt.Designer.cs">
+      <DependentUpon>Resources.pt.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Support\Daemons\DaemonFactory.cs" />
+    <Compile Include="Support\Daemons\Game\Factory\GameDaemonFactory.cs" />
+    <Compile Include="Support\Daemons\Game\Factory\TaskedGameDaemon.cs" />
+    <Compile Include="Support\Daemons\Game\Factory\WmiGameDaemon.cs" />
+    <Compile Include="Support\Daemons\Game\IGameDaemon.cs" />
+    <Compile Include="Support\Daemons\Game\IGameDaemonFactory.cs" />
+    <Compile Include="Support\Daemons\Hotkey\HotkeyResolver.cs" />
+    <Compile Include="Support\Daemons\Hotkey\HotkeyDaemon.cs" />
+    <Compile Include="Support\Daemons\Hotkey\IHotkeyDaemon.cs" />
+    <Compile Include="Support\Daemons\Hotkey\KeyboardHook\IMatchmaker.cs" />
+    <Compile Include="Support\Daemons\Hotkey\KeyboardHook\LowLevelHook.cs" />
+    <Compile Include="Support\Daemons\Hotkey\KeyboardHook\Modifers.cs" />
+    <Compile Include="Support\Daemons\IDaemon.cs" />
+    <Compile Include="Support\Repositories\Profile\IProfileRepository.cs" />
+    <Compile Include="Support\Repositories\Profile\ProfileRepository.cs" />
+    <Compile Include="Support\Repositories\Profile\TypeSwitch\CombinationStream.cs" />
+    <Compile Include="Support\Repositories\Profile\TypeSwitch\Converter.cs" />
+    <Compile Include="Support\Repositories\Profile\TypeSwitch\LegacyType.cs" />
+    <Compile Include="Support\Repositories\Profile\TypeSwitch\TypeSwitcher.cs" />
+    <Compile Include="Support\Services\Delivery\IPacket.cs" />
+    <Compile Include="Support\Services\Delivery\IProcessor.cs" />
+    <Compile Include="Support\Services\Delivery\KeyInterval.cs" />
+    <Compile Include="Support\Services\Delivery\DeliveryService.cs" />
+    <Compile Include="Support\Utils\Form\InputTransformation\Constants.cs" />
+    <Compile Include="Support\Utils\Form\InputTransformation\KeyTransformer.cs" />
+    <Compile Include="Support\Utils\Threading\SyntheticTask\SyTaskFactory.cs" />
+    <Compile Include="Support\Utils\Threading\SyntheticTask\SyTask.cs" />
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Support\Utils\Threading\SyntheticTask\SyTaskDelay.cs" />
+    <Compile Include="Support\Utils\Threading\Window\WindowHandler.cs" />
+    <Compile Include="Support\Utils\ViewModel\AbstractNotifyPropertyChanged.cs" />
+    <Compile Include="Support\Utils\ViewModel\AbstractModalViewModel.cs" />
+    <Compile Include="Support\Utils\ViewModel\AbstractViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.pt.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.pt.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Core\UI\Views\ActionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Core\UI\Views\DataManagerDeleteModalView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Core\UI\Views\DataManagerModalView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Core\UI\Views\DataManagerView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Core\UI\Views\GameView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Core\UI\Views\MacroModalView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Core\UI\Views\MacroView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Core\UI\Views\ModalBase.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Core\UI\Views\ProfileView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Core\UI\Views\ShellView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105.The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.2.10.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.2.10.0\build\Microsoft.Net.Compilers.props'))" />
+  </Target>
+</Project>

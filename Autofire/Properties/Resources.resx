@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <root>  
+ <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element><xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ActionInterval" xml:space="preserve">
+    <value>Interval</value>
+  </data>
+  <data name="ActionIntervalUnit" xml:space="preserve">
+    <value>Seconds</value>
+  </data>
+  <data name="ActionKey" xml:space="preserve">
+    <value>Function Key</value>
+  </data>
+  <data name="ActionSkillName" xml:space="preserve">
+    <value>Skill Name</value>
+  </data>
+  <data name="ConfigCreate" xml:space="preserve">
+    <value>Create New Profile</value>
+  </data>
+  <data name="ConfigCreateTitle" xml:space="preserve">
+    <value>Enter a name to create new</value>
+  </data>
+  <data name="ConfigRefresh" xml:space="preserve">
+    <value>Refresh Profile and List</value>
+  </data>
+  <data name="ConfigRemove" xml:space="preserve">
+    <value>Remove Profile</value>
+  </data>
+  <data name="ConfigRemoveTitle" xml:space="preserve">
+    <value>Do you want remove this profile?</value>
+  </data>
+  <data name="ConfigRename" xml:space="preserve">
+    <value>Rename Profile</value>
+  </data>
+  <data name="ConfigRenameTitle" xml:space="preserve">
+    <value>Enter a new name to rename</value>
+  </data>
+  <data name="ConfigTitle" xml:space="preserve">
+    <value>Management</value>
+  </data>
+  <data name="Donation" xml:space="preserve">
+    <value>Are you having fun with Autofire? Please, consider make a donation to support the creation of new features!</value>
+  </data>
+  <data name="GameIdentifyWindow" xml:space="preserve">
+    <value>Bring Target Window to Front</value>
+  </data>
+  <data name="GameSelectWindow" xml:space="preserve">
+    <value>Select Target Window</value>
+  </data>
+  <data name="HotkeyGlobalMode" xml:space="preserve">
+    <value>Global Mode ON/OFF</value>
+  </data>
+  <data name="MacroHotkey" xml:space="preserve">
+    <value>Enter a Hotkey to Activate Macro</value>
+  </data>
+  <data name="MacroModalTitle" xml:space="preserve">
+    <value>Enter a Hotkey</value>
+  </data>
+  <data name="MacroOnOff" xml:space="preserve">
+    <value>Enable/Disable Macro </value>
+  </data>
+  <data name="MacroRepeatMode" xml:space="preserve">
+    <value>Repeat Macro ON/OFF</value>
+  </data>
+  <data name="ProfileDescription" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="ProfileMacroHotkey" xml:space="preserve">
+    <value>Ctrl + 1</value>
+  </data>
+  <data name="ProfileMacroName1" xml:space="preserve">
+    <value>Consumable</value>
+  </data>
+  <data name="ProfileMacroName2" xml:space="preserve">
+    <value>Skills</value>
+  </data>
+  <data name="ProfileMacroName3" xml:space="preserve">
+    <value>Specials</value>
+  </data>
+  <data name="ProfileManager" xml:space="preserve">
+    <value>Profile Manager</value>
+  </data>
+  <data name="ProfileName" xml:space="preserve">
+    <value>CharName</value>
+  </data>
+  <data name="Run" xml:space="preserve">
+    <value>Run!</value>
+  </data>
+  <data name="Stop" xml:space="preserve">
+    <value>Stop!</value>
+  </data>
+</root>
